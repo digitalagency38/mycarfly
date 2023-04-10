@@ -1,0 +1,78 @@
+html,
+body 
+	height: 100%
+	font-family: "DINPro-Light"
+
+.wrapper 
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.main 
+	word-wrap: break-word
+	flex: 1 0 auto
+
+.footer 
+	flex: 0 0 auto
+
+.container
+  max-width: 1410px
+  margin: 0 auto
+
+#pp-nav
+	display: none
+
+.title
+	font-size: 48px
+	line-height: 60px
+	font-family: "DINPro-Bold"
+	margin-bottom: 40px
+	word-wrap: break-word
+
+.subtitle
+	word-wrap: break-word
+
+input
+	cursor: pointer
+	&::placeholder,
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&::-ms-input-placeholder,
+		color: #fff
+
+.header
+	position: absolute
+	display: flex
+	z-index: 10
+	width: 100%
+	top: 70px
+	&__container
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__logo
+		width: 176px
+		height: auto
+		svg
+			width: 100%
+			height: auto
+			fill: #fff
+	&__menu
+		display: none
+	&__close
+		display: none 
+	&__nav
+		ul
+			display: flex
+			li
+				list-style: none
+				&:not(:last-child)
+					a
+						margin-right: 60px
+				a
+					font-size: 20px
+					color: #fff
+			.active
+				a
+					font-family: "DINPro-Medium"

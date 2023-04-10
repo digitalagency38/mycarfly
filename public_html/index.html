@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CarFly - автомагнитолы на Android собственного производства</title>
+    <meta name="description" content="Автомагнитолы CarFly в штатные головные устройства всех автомобилей.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/jquery.pagepiling.css">
+    <style>
+        .is_soon {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            padding: 30px 100px 30px 40px !important;
+            -webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+            align-items: center !important;
+            background: #0B1C47 !important;
+            border-radius: 5px !important;
+            width: calc(100% - 10px);
+            margin: 30px 0 !important;
+            text-align: center !important;
+        }
+        
+        .production__block {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
+        .production__item {
+            width: 100% !important;
+            margin: 15px 0 !important;
+        }
+        
+        h2.soon {
+            text-transform: uppercase !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="header__logo">
+                <img src="img/svg/logo.svg" alt="" class="img-svg">
+            </a>
+            <div class="header__menu">
+                <img src="img/svg/burger.svg" alt="" class="img-svg">
+            </div>
+            <nav class="header__nav">
+                <div class="header__close">
+                    <img src="img/svg/close.svg" alt="" class="img-svg">
+                </div>
+                <ul id="menu">
+                    <li data-menuanchor="page1">
+                        <a href="#page1" class="active">
+                        Главная
+                    </a>
+                    </li>
+                    <li data-menuanchor="page2">
+                        <a href="#page2">
+                        Продукция
+                    </a>
+                    </li>
+                    <li data-menuanchor="page3">
+                        <a href="#page3">
+                        Где купить
+                    </a>
+                    </li>
+                    <li data-menuanchor="page4">
+                        <a href="#page4">
+                        Вопрос-ответ
+                    </a>
+                    </li>
+                    <li data-menuanchor="page5">
+                        <a href="#page5">
+                        Контакты
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="main" style="height: 100vh;" id="pagepiling">
+            <div class="section first" id="page1">
+                <div class="first__block container">
+                    <div class="first__slider">
+                        <div class="first__item">
+                            <div class="first__content">
+                                <h1 class="first__title">
+                                    Автомагнитола CarFly M150
+                                </h1>
+                                <p class="first__text">
+                                    Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                                </p>
+                                <a target="_blank" href="/files/carfly_a5_print21.pdf" class="first__btn">
+                                    <span>Подробнее</span>
+                                    <img src="img/svg/file.svg" alt="" class="img-svg">
+                                </a>
+                            </div>
+                            <div class="first__right">
+                                <div class="image">
+                                    <img src="img/soc_1.jpg" alt="">
+                                </div>
+                                <div class="first__links">
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/android-logo.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            Android 8.1
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/size.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            178*100 мм
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/sound-bars-pulse.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            DSP процессор
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="first__item">
+                            <div class="first__content">
+                                <h1 class="first__title">
+                                    Автомагнитола CarFly M150
+                                </h1>
+                                <p class="first__text">
+                                    Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                                </p>
+                                <a href="/files/carfly_a5_print21.pdf" class="first__btn">
+                                    <span>Подробнее</span>
+                                    <img src="img/svg/file.svg" alt="" class="img-svg">
+                                </a>
+                            </div>
+                            <div class="first__right">
+                                <div class="image">
+                                    <img src="img/soc_1.jpg" alt="">
+                                </div>
+                                <div class="first__links">
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/android-logo.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            Android 8.1
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/size.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            178*100 мм
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/sound-bars-pulse.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            DSP процессор
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="first__item">
+                            <div class="first__content">
+                                <h1 class="first__title">
+                                    Автомагнитола CarFly M150
+                                </h1>
+                                <p class="first__text">
+                                    Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                                </p>
+                                <a href="/files/carfly_a5_print21.pdf" class="first__btn">
+                                    <span>Подробнее</span>
+                                    <img src="img/svg/file.svg" alt="" class="img-svg">
+                                </a>
+                            </div>
+                            <div class="first__right">
+                                <div class="image">
+                                    <img src="img/soc_1.jpg" alt="">
+                                </div>
+                                <div class="first__links">
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/android-logo.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            Android 8.1
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/size.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            178*100 мм
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <div class="first__links-circle">
+                                            <img src="img/svg/sound-bars-pulse.svg" alt="" class="img-svg">
+                                        </div>
+                                        <span>
+                                            DSP процессор
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="first__scroll">
+                        <img src="img/svg/arrow.svg" alt="" class="img-svg">
+                        <span>scroll</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section second" id="page2">
+                <div class="container">
+                    <div class="production">
+                        <h2 class="production__title title">
+                            Продукция
+                        </h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="production__block">
+                            <div class="production__item">
+                                <img src="img/soc_1.jpg" alt="" class="production__image">
+                                <div class="production__content">
+                                    <h3 class="production__subtitle title">
+                                        Автомагнитола CarFly M150
+                                    </h3>
+                                    <p class="production__text">
+                                        Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                                    </p>
+                                </div>
+                                <span class="production__price">
+                                    15 590 р.
+                                </span>
+                                <a target="_blank" href="/files/carfly_a5_print21.pdf" class="production__btn">
+                                    <span>Подробнее</span>
+                                    <img src="img/svg/file.svg" alt="" class="img-svg">
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="production__block is_soon">
+                            <h2 class="soon">Скоро поступление новых моделей</h2>
+                        </div>
+                        <div class="production__block is_soon">
+                            <h2 class="soon">Скоро поступление новых моделей</h2>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="section market" id="page3">
+                <div class="container">
+                    <div class="market__block">
+                        <h2 class="market__title title">
+                            Где купить?
+                        </h2>
+                        <div class="market__slider">
+                            <a href="https://market.yandex.ru/" class="market__item">
+                                <img src="img/yandex.png" alt="" class="market__logo">
+                                <h3 class="market__itemTitle">
+                                    market.yandex.ru
+                                </h3>
+                            </a>
+                            <a href="https://detaliclub.ru/shop" class="market__item">
+                                <img src="img/detali.png" alt="" class="market__logo">
+                                <h3 class="market__itemTitle">
+                                    detaliclub.ru
+                                </h3>
+                            </a>
+                            <a href="https://detaliclub.ru/shop" class="market__item">
+                                <img src="img/detali.png" alt="" class="market__logo">
+                                <h3 class="market__itemTitle">
+                                    detaliclub.ru
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section question pp-scrollable" id="page4">
+                <div class="container">
+                    <div class="question__block">
+                        <h2 class="question__title title">
+                            Вопрос - ответ
+                        </h2>
+                        <div class="accordeon">
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Какой размер устройства?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Размер устройства 178*100, диагональ 7 дюймов.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Смогу ли я самостоятельно установить?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Устройство является универсальным, подойдет на большинство автомобилей. В случае некоторых автомобилей, стандартного комплекта проводов будет вполне достаточно.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>После установки остались зазоры вокруг устройства, что с этим делать?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    В некоторых автомобилях для правильной установки необходима переходная рамка, для того чтобы убрать все зазоры и неровности. Для уточнения обратитесь в техподдержку.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Возможно ли запустить штатный усилитель?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Возможно, для большинства автомобилей предусмотрен Canbus, который приобретается отдельно под модель автомобиля, где присутствует заводской усилитель звука.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Будут ли у меня работать кнопки на руле?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Зачастую для подключения кнопок на руле достаточно набора проводов из комплекта устройства, но бывают случаи, где необходим Canbus. Для уточнения по модели вашего автомобиля, напишите в техподдержку.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>В чем преимущество головного устройства на базе андроид в сравнении с штатным устройством?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Большое количество функций и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле. Возможность подключения к интернету, подключения вашего смартфона для прослушивания музыки и общения handsfree через Bluetooth,
+                                    автономная навигация, подключение usb накопителя, функция дублежа экрана с телефона, возможность установить с платформы playmarket все необходимые приложения. Если остались вопросы, напишите нам в техподдержку.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Какая выходная мощность звука?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Максимальная мощность звука 50w на канал.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Возможно подключить камеру заднего и переднего вида?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Да, на устройстве предусмотрены видео выходы под камеры заднего и переднего вида.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Возможно подключить усилитель звука?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Да, на устройстве предусмотрены аудиовыходы для подключения усилителя звука.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Возможно пользоваться навигацией без подключения к интернету?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Возможно, в комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Подключил камеру заднего вида, появилась рябь во время включения задней передачи.</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    В большинстве случаев, подобная проблема решается, подключением фильтра по питанию, который приобретается отдельно.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>При включении габаритов, экран становится тусклым, как отключить такую функцию?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Есть три возможных решения, как отключить эту функцию. 1. Отключить провод иллюминации, который идет на основную фишку питания устройства. 2. Прибавить яркость экрана на уже включенных габаритах. 3. Отключить подсветку по габаритам в настройках устройства.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Возможно ли сменить приложение навигации на виджете рабочего стола?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Да, в настройках устройства, необходимо выбрать заранее скаченное навигационное приложение и выбрать его по умолчанию.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>После подключения к интернету, дата выставилась верная, часы настроить не могу.</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Необходимо зайти в настройки даты и времени, отключить пункт «использовать время сети» и выставить нужное значение.
+                                </div>
+                            </div>
+                            <div class="accordeon__panel">
+                                <div class="accordeon__heading">
+                                    <span>Я приобрел отдельно комплект камер 360, возможно ли подключить на устройство?</span>
+                                    <div class="accordeon__plus">
+                                        <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="accordeon__collapse">
+                                    Существует большое количество всевозможных систем, которые реализуют обзор 360, если ваш комплект включает в себя специальный блок с 1 выходом rca кабеля, то проблем с подключением не возникнет.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section contact" id="page5">
+                <div class="container">
+                    <div class="contact__block">
+                        <div class="contact__info">
+                            <h2 class="contact__title title">
+                                Контакты
+                            </h2>
+                            <div class="contact__item">
+                                <h3 class="contact__subtitle title">
+                                    Центральный офис в Иркутске:
+                                </h3>
+                                <a href="#" class="contact__link">
+                                ул.Октябрьской революции, д.1, к.2 <br>
+                                ТЦ "Автоград", павильон № 101, павильон № 106
+                            </a>
+                                <a href="tel:83952628369" class="contact__link">
+                                +7 (3952) 62-83-69
+                            </a>
+                            </div>
+                            <div class="contact__item">
+                                <h3 class="contact__subtitle title">
+                                    Сервисный центр в Иркутске:
+                                </h3>
+                                <a href="#" class="contact__link">
+                                ул.Баррикад, 2/13, Павловский рынок Пав #50
+                            </a>
+                                <a href="tel:83952628369" class="contact__link">
+                                8 (3952) 62 83 69
+                            </a>
+                                <a target="_blank" href="https://wa.me/89145284484" class="contact__link">
+                                WhatsApp 8 914 528 44 84
+                            </a>
+                            </div>
+                        </div>
+                        <div class="contact__map">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.pagepiling.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFACK5dCT2sHjIKcjVtV8po-2h2tWvOdQ&callback=initMap&v=weekly" async></script>
+    <script>
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+                menu: '#menu',
+            });
+        });
+
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: new google.maps.LatLng(52.295341, 104.296578),
+                zoom: 13,
+            });
+
+            const icons = {
+                info: {
+                    icon: "../img/marker.png",
+                },
+            };
+            const features = [{
+                position: new google.maps.LatLng(52.2954245, 104.3047055),
+                type: "info",
+            }, {
+                position: new google.maps.LatLng(52.294379, 104.2943406),
+                type: "info",
+            }, ];
+
+            // Create markers.
+            for (let i = 0; i < features.length; i++) {
+                const marker = new google.maps.Marker({
+                    position: features[i].position,
+                    icon: icons[features[i].type].icon,
+                    map: map,
+                });
+            }
+        }
+    </script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

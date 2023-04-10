@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CarFly - автомагнитолы на Android собственного производства</title>
+    <meta name="description" content="Автомагнитолы CarFly в штатные головные устройства всех автомобилей.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/magni.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/jquery.pagepiling.css">
+    <!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();
+	   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+	   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(93104764, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/93104764" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+    <style>
+ol.slider__indicators {
+    display: none;
+}
+        .header__nav ul li:not(:last-child) a {
+            margin-right: 40px;
+        }
+        .slider__control {
+            cursor: pointer !important;
+        }
+        .video {
+width: 70%;
+            margin: auto;
+            height: 450px;
+        }
+
+        .accordeon.video.notclick:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background: #ffffff20;
+        }
+
+        .first:after, div#page6:after, div#page7:after, .second:after, .market:after, .question:after, .contact:after {
+            pointer-events: none;
+            z-index: -1 !important;
+        }
+        .hidden {
+            display: none;
+        }
+
+        .accordeon.video iframe {
+            width: 100%;
+            height: 600px;
+            min-height: 398px;
+        }
+
+        .first__content {
+            max-width: 550px;
+            margin: 0 auto;
+            margin-top: -15vh;
+        }
+
+        .first__right {
+            width: 550px;
+            margin: 0 auto;
+        }
+
+        .title {
+            position: relative;
+            z-index: 5;
+        }
+
+        main#pagepiling {
+            position: relative;
+        }
+
+        .slider__wrapper {
+            overflow: hidden;
+        }
+
+.slider__item {
+flex: 0 0 33.3%;
+    max-width: 33.3%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 7rem;
+}
+.foto_slid .slider__items {
+    display: block;
+}
+.foto_slid .slider__item {
+    flex: none;
+    max-width: 100%;
+    display: block;
+}
+.production__item .img-svg {
+    width: 20px;
+    height: 24px;
+    margin: 0;
+}
+@media all and (min-width: 767px) {
+	.question_slider.slider2 .slider__item {
+        height: 55vh;	
+	}
+    .question_slider.slider2 .slider__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .question_slider.slider2 .slider__item img {
+        object-fit: contain;
+    }
+    .question_slider.slider2 {
+        z-index: 5;
+    }
+    .slider2 {
+    	position: relative;
+    }
+}
+@media all and (max-width: 767px) {
+	.question_slider .slider__items {
+		flex-direction: column;
+	}
+	.question_slider .slider__item {
+		flex: none;
+		max-width: 100%;
+		height: auto;
+	}
+    .question_slider .slider__wrapper {
+    	overflow: unset;
+    }
+    .accordeon {
+    	padding: 0;
+    }
+    .question_slider .slider__control, .question_slider .slider__indicators {
+    	display: none;
+    }
+    .question_slider .slider__item:not(:last-child) {
+    	margin-bottom: 12px;
+    }
+    .accordeon__plus {
+	    right: 20px;
+	    top: 50%;
+	    height: 20px;
+	    z-index: 10;
+	    margin-top: -100px;
+    }
+    .accordeon__heading {
+    	position: relative;
+    }
+}
+        .section_foto_slider.slider .slider__item {
+            height: 55vh;
+        }
+
+        .slider__item img {
+            object-fit: contain;
+            width: 90%;
+            height: 100%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .sertificat_foto_slider.slider .slider__item {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .sertificat_foto_slider.slider .slider__item img {
+            object-fit: contain;
+        }
+
+        div#page6:after {
+            content: '';
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            top: 0px;
+            width: 1640px;
+            height: 100vh;
+            background-size: auto;
+        }
+
+        div#page7:after {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            right: 0;
+            top: 0px;
+            width: 1640px;
+            height: 100vh;
+            background-size: auto;
+        }
+
+        .section.question.active {
+
+        }
+
+
+        .section_foto_slider.slider {
+            z-index: 5;
+        }
+
+        .sertificat_foto, .section_foto {
+            z-index: 5;
+        }
+
+        .sertificat_foto_slider.slider {
+            z-index: 5;
+        }
+
+
+        .question .container {
+            padding-top: 0;
+        }
+
+        .first:after, div#page6:after, div#page7:after, .second:after, .market:after, .question:after, .contact:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            top: 86px;
+            background: -webkit-radial-gradient(57.9% 57.9% at 50% 50%, #C51CF1 0%, rgba(0, 3, 90, 0) 100%);
+            background: -o-radial-gradient(57.9% 57.9% at 50% 50%, #C51CF1 0%, rgba(0, 3, 90, 0) 100%);
+            background: -ms-radial-gradient(57.9% 57.9% at 50% 50%, #C51CF1 0%, rgba(0, 3, 90, 0) 100%);
+            background: radial-gradient(57.9% 57.9% at 50% 50%, #C51CF1 0%, rgba(0, 3, 90, 0) 100%);
+            -webkit-filter: blur(15px);
+            -moz-filter: blur(15px);
+            filter: blur(15px);
+            opacity: 1;
+        }
+
+        .first::before, div#page6:before, div#page7:before, .second:before, .market:before, .question:before, .contact:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -45%;
+            top: -45%;
+            background: -webkit-radial-gradient(57.9% 57.9% at 50% 50%, #3E00FF 0%, rgba(62, 0, 255, 0) 100%);
+            background: -o-radial-gradient(57.9% 57.9% at 50% 50%, #3E00FF 0%, rgba(62, 0, 255, 0) 100%);
+            background: -ms-radial-gradient(57.9% 57.9% at 50% 50%, #3E00FF 0%, rgba(62, 0, 255, 0) 100%);
+            background: radial-gradient(57.9% 57.9% at 50% 50%, #3E00FF 0%, rgba(62, 0, 255, 0) 100%);
+
+            opacity: 1;
+            -webkit-filter: blur(15px);
+            -moz-filter: blur(15px);
+            filter: blur(15px);
+        }
+
+        .is_soon {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+/*            padding: 30px 100px 30px 40px !important;*/
+            -webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+            align-items: center !important;
+            background: #0B1C47 !important;
+            border-radius: 5px !important;
+/*            width: calc(100% - 10px);*/
+/*            margin: 30px 0 !important;*/
+            text-align: center !important;
+        }
+
+/*        .production__block {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .production__item {
+            width: 100% !important;
+            margin: 15px 0 !important;
+        }*/
+        .production__block {
+        	display: flex;
+        	/* margin: 0 -10px;
+        	flex-wrap: wrap; */
+        	grid-gap: 0;
+            margin: 0 -10px;
+        }
+        .production__item {
+        	/* width: calc(33.3% - 20px); */
+        	flex-direction: column;
+        	padding: 20px;
+            margin: 0 10px;
+        	/* margin-bottom: 20px;
+        	justify-content: center;
+        	align-items: center; */
+        }
+        .production__item .production__image {
+            height: 170px !important;
+        }
+        .production__image, .production__content {
+        	margin-right: 0;
+        }
+        .production__content {
+        	margin-top: 15px;
+        }
+        .production__article {
+            margin-top: 4px;
+            color: #777;
+            font-size: 14px;
+        }
+        .production__price {
+        	width: 100%;
+        	margin: 15px 0;
+        }
+        .production__btn {
+        	width: 100%;
+        	margin-left: 0;
+        }
+
+        h2.soon {
+            text-transform: uppercase !important;
+            text-align: center;
+        }
+
+        .first .next__block {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .first__slider {
+            width: 100%;
+        }
+
+        .header {
+            position: absolute;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            z-index: 999;
+            width: 100%;
+            top: 0;
+            background: none;
+            height: 100px;
+            padding: 30px;
+        }
+
+        @media (max-width: 767px) {
+        	.production__item {
+    		    width: calc(50% - 20px);	
+        	}
+            .production {
+                height: auto;
+            }
+
+            .accordeon.video iframe {
+                min-height: auto;
+                height: 400px;
+            }
+
+            .sertificat_foto, .section_foto {
+                z-index: 5;
+                position: relative;
+            }
+
+            .first::before, div#page6:before, div#page7:before, .second:before, .market:before, .question:before, .contact:before {
+                background: none;
+                content: none;
+            }
+
+            .first:after, div#page6:after, div#page7:after, .second:after, .market:after, .question:after, .contact:after {
+                background: none;
+                content: none;
+            }
+
+            .section_foto h2.market__title.title {
+                position: relative;
+                z-index: 5;
+            }
+
+            .first__right {
+                width: 100%;
+            }
+
+            .section_foto_slider.slider .slider__item {
+                flex: 0 0 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .sertificat_foto, .section_foto {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .market__block {
+                margin-top: 30px;
+            }
+
+            .contact {
+                padding-top: 20px;
+            }
+
+            .sertificat_foto h2.market__title.title {
+                margin-bottom: 30px;
+                line-height: 32px;
+            }
+
+            .first__content {
+                margin-top: 0px;
+                margin-left: 0;
+            }
+
+            html, body {
+                overflow: auto;
+            }
+
+            main#pagepiling {
+                height: 100% !important;
+            }
+
+            .second {
+                height: 100%;
+            }
+
+            .second {
+                position: relative;
+                overflow-x: hidden;
+            }
+
+            .production {
+                padding-top: 0;
+                margin-top: 50px;
+            }
+
+            .wrapper {
+                overflow-x: hidden;
+            }
+
+            .market {
+                margin-top: 0;
+                padding-top: 0;
+                height: auto;
+                padding-bottom: 30px;
+            }
+
+            .market::after {
+                top: 60px;
+            }
+
+
+            div#page4, div#page46, div#page45 {
+                padding-bottom: 20px;
+                height: 100%;
+            }
+
+            .is_soon {
+                padding: 30px !important;
+            }
+        }
+        @media (max-width: 640px) {
+			.production__item {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.production__block {
+				margin: 0;
+			}
+        }
+
+    </style>
+</head>
+
+<body>
+<header class="header">
+    <div class="container header__container">
+        <a href="/" class="header__logo">
+            <img src="img/svg/logo.svg" alt="" class="img-svg">
+        </a>
+        <div class="header__menu">
+            <img src="img/svg/burger.svg" alt="" class="img-svg">
+        </div>
+        <nav class="header__nav">
+            <div class="header__close">
+                <img src="img/svg/close.svg" alt="" class="img-svg">
+            </div>
+            <ul id="menu">
+                <li data-menuanchor="page1">
+                    <a href="#page1" class="active">
+                        Главная
+                    </a>
+                </li>
+                <li data-menuanchor="page2">
+                    <a href="#page2">
+                        Продукция
+                    </a>
+                </li>
+                <li data-menuanchor="page6" data-menu-parent="6">
+                    <a href="#page6">
+                        Фотогалерея
+                    </a>
+                </li>
+                <li data-menuanchor="page61">
+                    <a href="#page61">
+                        Видео-обзор
+                    </a>
+                </li>
+                <li data-menuanchor="page7">
+                    <a href="#page7">
+                        Сертифиĸаты
+                    </a>
+                </li>
+                <li data-menuanchor="page3">
+                    <a href="#page3">
+                        Где купить
+                    </a>
+                </li>
+                <li data-menuanchor="page4" data-menu-parent="4">
+                    <a href="#page4">
+                        Вопрос-ответ
+                    </a>
+                </li>
+                <li class="hidden" data-menuanchor="page45" data-menu-parent="4">
+                    <a href="#page45">
+                        Вопрос-ответ
+                    </a>
+                </li>
+                <li class="hidden" data-menuanchor="page46" data-menu-parent="4">
+                    <a href="#page46">
+                        Вопрос-ответ
+                    </a>
+                </li>
+                <li data-menuanchor="page5">
+                    <a href="#page5">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <main class="main" style="height: 100vh;" id="pagepiling">
+        <div class="section first" id="page1">
+            <div class="first__block container">
+                <div class="first__slide">
+                    <div class="first__item">
+                        <div class="first__content">
+                            <h1 class="first__title">
+                                <!-- Автомагнитола CarFly M150 -->
+                                Штатные автомагнитолы на Android CarFly
+                            </h1>
+                            <p class="first__text">
+                                Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                            </p>
+                            <!-- <a target="_blank" href="/files/bkl3.pdf" class="first__btn">
+                                <span>Подробнее</span>
+                                <img src="img/svg/file.svg" alt="" class="img-svg">
+                            </a> -->
+                        </div>
+                        <div class="first__right">
+                            <div class="image">
+                                <img src="img/new/1.png" alt="">
+                            </div>
+                            <!-- <div class="first__links">
+                                <a href="#">
+                                    <div class="first__links-circle">
+                                        <img src="img/svg/android-logo.svg" alt="" class="img-svg">
+                                    </div>
+                                    <span>
+                                            Android 8.1
+                                        </span>
+                                </a>
+                                <a href="#">
+                                    <div class="first__links-circle">
+                                        <img src="img/svg/size.svg" alt="" class="img-svg">
+                                    </div>
+                                    <span>
+                                            178*100 мм
+                                        </span>
+                                </a>
+                                <a href="#">
+                                    <div class="first__links-circle">
+                                        <img src="img/svg/sound-bars-pulse.svg" alt="" class="img-svg">
+                                    </div>
+                                    <span>
+                                            DSP процессор
+                                        </span>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!--   <div class="first__item">
+                           <div class="first__content">
+                               <h1 class="first__title">
+                                   Автомагнитола CarFly M150
+                               </h1>
+                               <p class="first__text">
+                                   Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                               </p>
+                               <a href="/files/bkl3.pdf" class="first__btn">
+                                   <span>Подробнее</span>
+                                   <img src="img/svg/file.svg" alt="" class="img-svg">
+                               </a>
+                           </div>
+                           <div class="first__right">
+                               <div class="image">
+                                   <img src="img/soc_1.jpg" alt="">
+                               </div>
+                               <div class="first__links">
+                                   <a href="#">
+                                       <div class="first__links-circle">
+                                           <img src="img/svg/android-logo.svg" alt="" class="img-svg">
+                                       </div>
+                                       <span>
+                                               Android 8.1
+                                           </span>
+                                   </a>
+                                   <a href="#">
+                                       <div class="first__links-circle">
+                                           <img src="img/svg/size.svg" alt="" class="img-svg">
+                                       </div>
+                                       <span>
+                                               178*100 мм
+                                           </span>
+                                   </a>
+                                   <a href="#">
+                                       <div class="first__links-circle">
+                                           <img src="img/svg/sound-bars-pulse.svg" alt="" class="img-svg">
+                                       </div>
+                                       <span>
+                                               DSP процессор
+                                           </span>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="first__item">
+                           <div class="first__content">
+                               <h1 class="first__title">
+                                   Автомагнитола CarFly M150
+                               </h1>
+                               <p class="first__text">
+                                   Штатное головное устройство на OC Android универсального типоразмера 2DIN.
+                               </p>
+                               <a href="/files/bkl3.pdf" class="first__btn">
+                                   <span>Подробнее</span>
+                                   <img src="img/svg/file.svg" alt="" class="img-svg">
+                               </a>
+                           </div>
+                           <div class="first__right">
+                               <div class="image">
+                                   <img src="img/soc_1.jpg" alt="">
+                               </div>
+                               <div class="first__links">
+                                   <a href="#">
+                                       <div class="first__links-circle">
+                                           <img src="img/svg/android-logo.svg" alt="" class="img-svg">
+                                       </div>
+                                       <span>
+                                               Android 8.1
+                                           </span>
+                                   </a>
+                                   <a href="#">
+                                       <div class="first__links-circle">
+                                           <img src="img/svg/size.svg" alt="" class="img-svg">
+                                       </div>
+                                       <span>
+                                               178*100 мм
+                                           </span>
+                                   </a>
+                                   <a href="#">
+                                       <div class="first__links-circle">
+                                           <img src="img/svg/sound-bars-pulse.svg" alt="" class="img-svg">
+                                       </div>
+                                       <span>
+                                               DSP процессор
+                                           </span>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>-->
+                </div>
+
+                <div class="first__scroll">
+                    <img src="img/svg/arrow.svg" alt="" class="img-svg">
+                    <span>scroll</span>
+                </div>
+            </div>
+        </div>
+        <div class="section second" id="page2">
+            <div class="container">
+                <div class="production">
+                    <h2 class="production__title title">
+                        Продукция
+                    </h2>
+                    <div class="section_foto_slider slider">
+                        <!-- <div class="slider__wrapper"> -->
+                            <div class="production__block prod_slid">
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p1.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly М100</h3>
+                                        <div class="production__article">Артикул: CARFLYM100011607</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">7 890 р./ шт</span>
+                                    <div class="production__btn feed1">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p2.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly M150</h3>
+                                        <div class="production__article">Артикул: CARFLYM150023209</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">11 890 р./ шт</span>
+                                    <div class="production__btn feed2">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p3.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly М150 Toyota</h3>
+                                        <div class="production__article">Артикул: CARFLYM150023207</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">11 890 р./ шт</span>
+                                    <div class="production__btn feed3">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p4.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly М150i</h3>
+                                        <div class="production__article">Артикул: CARFLYM150023210</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">11 890 р./ шт</span>
+                                    <div class="production__btn feed4">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p5.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly M300 Toyota</h3>
+                                        <div class="production__article">Артикул: CARFLYM300033207</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">14 890 р./ шт</span>
+                                    <div class="production__btn feed5">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p6.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly M300 Universal</h3>
+                                        <div class="production__article">Артикул: CARFLYM100011607</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">14 890 р./ шт</span>
+                                    <div class="production__btn feed6">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p7.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly М300</h3>
+                                        <div class="production__article">Артикул: CARFLYM300033209</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">14 890 р./ шт</span>
+                                    <div class="production__btn feed7">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                                <div class="production__item slider__item">
+                                    <img src="img/new/p8.png" alt="" class="production__image">
+                                    <div class="production__content">
+                                        <h3 class="production__subtitle title">CarFly М300i</h3>
+                                        <div class="production__article">Артикул: CARFLYM300033210</div>
+                                        <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
+                                    </div>
+                                    <span class="production__price">14 890 р./ шт</span>
+                                    <div class="production__btn feed8">
+                                        <span>Подробнее</span>
+                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <a href="#" class="slider__control" data-slide="prev"></a>
+                            <a href="#" class="slider__control" data-slide="next"></a>
+                            <ol class="slider__indicators">
+                                <li data-slide-to="0"></li>
+                                <li data-slide-to="1"></li>
+                                <li data-slide-to="2"></li>
+                                <li data-slide-to="3"></li>
+                                <li data-slide-to="4"></li>
+                                <li data-slide-to="5"></li>
+                                <li data-slide-to="6"></li>
+                                <li data-slide-to="7"></li>
+                            </ol>
+                        </div> -->
+                    </div>
+                    <!-- <div class="production__block is_soon">
+                        <h2 class="soon">Скоро поступление новых моделей</h2>
+                    </div>
+                    <div class="production__block is_soon">
+                        <h2 class="soon">Скоро поступление новых моделей</h2>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="section section_foto" id="page6">
+            <div class="container">
+                <h2 class="market__title title">
+                    Фотогалерея
+                </h2>
+                <div class="section_foto_slider">
+                    <!-- <div class="slider__wrapper"> -->
+                        <div class="slider__items popup-gallery2 foto_slid">
+                            <div class="slider__item">
+                                <a href="/img/new/s1.jpg">
+                                    <img src="/img/new/s1.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/s2.jpg">
+                                    <img src="/img/new/s2.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/s3.jpg">
+                                    <img src="/img/new/s3.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/s4.jpg">
+                                    <img src="/img/new/s4.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/s5.jpg">
+                                    <img src="/img/new/s5.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/s6.jpg">
+                                    <img src="/img/new/s6.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/s7.jpg">
+                                    <img src="/img/new/s7.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/9.jpg">
+                                    <img src="/img/new/9.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/10.jpg">
+                                    <img src="/img/new/10.jpg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new/11.jpg">
+                                    <img src="/img/new/11.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    <!-- </div>
+                    <a href="#" class="slider__control" data-slide="prev"></a>
+                    <a href="#" class="slider__control" data-slide="next"></a>
+                    <ol class="slider__indicators">
+                        <li data-slide-to="0"></li>
+                        <li data-slide-to="1"></li>
+                        <li data-slide-to="2"></li>
+                        <li data-slide-to="3"></li>
+                        <li data-slide-to="4"></li>
+                        <li data-slide-to="5"></li>
+                        <li data-slide-to="6"></li>
+                        <li data-slide-to="7"></li>
+                        <li data-slide-to="8"></li>
+                        <li data-slide-to="9"></li>
+                    </ol> -->
+                </div>
+            </div>
+        </div>
+        <div class="section sertificat_foto" id="page61">
+            <div class="container">
+                <h2 class="market__title title">
+                    Видео-обзор
+                </h2>
+                <div id="notscrollframe" class="accordeon video notclick" onclick="this.classList.remove('notclick');">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Uaw-A7q0PfE"
+                            title="Автомобильная магнитола CARFLY M150. Обзор" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="section sertificat_foto" id="page7">
+            <div class="container">
+                <h2 class="market__title title">
+                    Сертифиĸаты
+                </h2>
+                <div class="sertificat_foto_slider">
+                    <!-- <div class="slider__wrapper"> -->
+                        <div class="slider__items popup-gallery sertificate_slider">
+                            <a class="slider__item" href="img/foto_sert_1.PNG" title="Сертификат 1">
+                                <img src="img/foto_sert_1.PNG">
+                            </a>
+                            <a class="slider__item" href="img/foto_sert_2.PNG" title="Сертификат 2">
+                                <img src="img/foto_sert_2.PNG">
+                            </a>
+                            <a class="slider__item" href="img/foto_sert_3.PNG" title="Сертификат 3">
+                                <img src="img/foto_sert_3.PNG">
+                            </a>
+                            <a class="slider__item" href="img/serf.jpg" title="Сертификат 4">
+                                <img src="img/serf.jpg" href="img/serf.jpg" title="Сертификат 4">
+                            </a>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <a href="#" class="slider__control" data-slide="prev"></a>
+                    <a href="#" class="slider__control" data-slide="next"></a>
+                    <ol class="slider__indicators">
+                        <li data-slide-to="0"></li>
+                        <li data-slide-to="1"></li>
+                        <li data-slide-to="2"></li>
+                        <li data-slide-to="3"></li>
+                    </ol> -->
+                </div>
+            </div>
+        </div>
+        <div class="section market" id="page3">
+            <div class="container">
+                <div class="market__block">
+                    <h2 class="market__title title">
+                        Где купить?
+                    </h2>
+                    <div class="market__slider">
+                        <a href="https://www.wildberries.ru/brands/carfly" class="market__item">
+                            <img src="img/wb.png" alt="" class="market__logo">
+                            <h3 class="market__itemTitle">
+                                wildberries.ru
+                            </h3>
+                        </a>
+                        <a href="https://detaliclub.ru/store/avtozvuk/avtomagnitoly/avtomagnitola-carfly-m150.html"
+                           class="market__item">
+                            <img src="img/detali.png" alt="" class="market__logo">
+                            <h3 class="market__itemTitle">
+                                detaliclub.ru
+                            </h3>
+                        </a>
+                        <a href="https://www.ozon.ru/seller/magazin-avtoelektroniki-143728/products/?miniapp=seller_143728"
+                           class="market__item">
+                            <img src="img/svg_det.svg" alt="" class="market__logo">
+                            <h3 class="market__itemTitle">
+                                ozon.ru
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section question" id="page4">
+            <div class="container">
+                <h2 class="question__title title">
+                    Вопрос - ответ
+                </h2>
+                <div class="question_slider">
+	                <!-- <div class="slider__wrapper"> -->
+	                    <div class="slider__items questions_slider">
+			                <div class="question__block slider__item">
+			                    <div class="accordeon">
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Какой размер устройства?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Размер устройства 178*100, диагональ 7 дюймов.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Смогу ли я самостоятельно установить?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Устройство является универсальным, подойдет на большинство автомобилей. В случае
+			                                некоторых автомобилей, стандартного комплекта проводов будет вполне достаточно.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>После установки остались зазоры вокруг устройства, что с этим делать?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                В некоторых автомобилях для правильной установки необходима переходная рамка, для того
+			                                чтобы убрать все зазоры и неровности. Для уточнения обратитесь в техподдержку.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Возможно ли запустить штатный усилитель?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Возможно, для большинства автомобилей предусмотрен Canbus, который приобретается
+			                                отдельно под модель автомобиля, где присутствует заводской усилитель звука.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Будут ли у меня работать кнопки на руле?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Зачастую для подключения кнопок на руле достаточно набора проводов из комплекта
+			                                устройства, но бывают случаи, где необходим Canbus. Для уточнения по модели вашего
+			                                автомобиля, напишите в техподдержку.
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="question__block slider__item">
+			                    <div class="accordeon">
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>В чем преимущество головного устройства на базе андроид в сравнении с штатным устройством?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Большое количество функций и очень интересный функционал, фактически это второй телефон,
+			                                только установленный в автомобиле. Возможность подключения к интернету, подключения
+			                                вашего смартфона для прослушивания музыки и общения handsfree через Bluetooth,
+			                                автономная навигация, подключение usb накопителя, функция дублежа экрана с телефона,
+			                                возможность установить с платформы playmarket все необходимые приложения. Если остались
+			                                вопросы, напишите нам в техподдержку.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Какая выходная мощность звука?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Максимальная мощность звука 50w на канал.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Возможно подключить камеру заднего и переднего вида?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Да, на устройстве предусмотрены видео выходы под камеры заднего и переднего вида.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Возможно подключить усилитель звука?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Да, на устройстве предусмотрены аудиовыходы для подключения усилителя звука.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Возможно пользоваться навигацией без подключения к интернету?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Возможно, в комплектации с устройством предусмотрена GPS антенна, которая позволит
+			                                пользоваться любым навигатором с заранее установленными картами города.
+			                            </div>
+			                        </div>
+
+			                    </div>
+			                </div>
+			                <div class="question__block slider__item">
+			                    <div class="accordeon">
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Подключил камеру заднего вида, появилась рябь во время включения задней передачи.</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                В большинстве случаев, подобная проблема решается, подключением фильтра по питанию,
+			                                который приобретается отдельно.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>При включении габаритов, экран становится тусклым, как отключить такую функцию?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Есть три возможных решения, как отключить эту функцию. 1. Отключить провод иллюминации,
+			                                который идет на основную фишку питания устройства. 2. Прибавить яркость экрана на уже
+			                                включенных габаритах. 3. Отключить подсветку по габаритам в настройках устройства.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Возможно ли сменить приложение навигации на виджете рабочего стола?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Да, в настройках устройства, необходимо выбрать заранее скаченное навигационное
+			                                приложение и выбрать его по умолчанию.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>После подключения к интернету, дата выставилась верная, часы настроить не могу.</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Необходимо зайти в настройки даты и времени, отключить пункт «использовать время сети» и
+			                                выставить нужное значение.
+			                            </div>
+			                        </div>
+			                        <div class="accordeon__panel">
+			                            <div class="accordeon__heading">
+			                                <span>Я приобрел отдельно комплект камер 360, возможно ли подключить на устройство?</span>
+			                                <div class="accordeon__plus">
+			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+			                                </div>
+			                            </div>
+			                            <div class="accordeon__collapse">
+			                                Существует большое количество всевозможных систем, которые реализуют обзор 360, если ваш
+			                                комплект включает в себя специальный блок с 1 выходом rca кабеля, то проблем с
+			                                подключением не возникнет.
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+	                    </div>
+	                <!-- </div>
+	                <a href="#" class="slider__control" data-slide="prev"></a>
+	                <a href="#" class="slider__control" data-slide="next"></a>
+	                <ol class="slider__indicators">
+	                    <li data-slide-to="0"></li>
+	                    <li data-slide-to="1"></li>
+	                    <li data-slide-to="2"></li>
+	                </ol> -->
+                </div>
+            </div>
+        </div>
+        <div class="section contact" id="page5">
+            <div class="container">
+                <div class="contact__block">
+                    <div class="contact__info">
+                        <h2 class="contact__title title">
+                            Контакты
+                        </h2>
+                        <div class="contact__item">
+                            <h3 class="contact__subtitle title">
+                                Центральный офис в Иркутске:
+                            </h3>
+                            <a href="#" class="contact__link">
+                                ул.Октябрьской революции, д.1, к.2 <br>
+                                ТЦ "Автоград", павильон № 101, павильон № 106
+                            </a>
+                            <a href="tel:83952628369" class="contact__link">
+                                +7 (3952) 62-83-69
+                            </a>
+                        </div>
+                        <div class="contact__item">
+                            <h3 class="contact__subtitle title">
+                                Сервисный центр в Иркутске:
+                            </h3>
+                            <a href="#" class="contact__link">
+                                ул.Баррикад, 2/13, Павловский рынок Пав #50
+                            </a>
+                            <a href="tel:83952628369" class="contact__link">
+                                8 (3952) 62 83 69
+                            </a>
+                            <a target="_blank" href="https://wa.me/89145284484" class="contact__link">
+                                WhatsApp 8 914 528 44 84
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact__map">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/jquery.pagepiling.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFACK5dCT2sHjIKcjVtV8po-2h2tWvOdQ&callback=initMap&v=weekly"
+        async></script>
+
+
+
+
+
+
+
+<div class="form-wrapper form1">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery3">
+                        <a href="img/new/p1.png">
+                            <img src="img/new/p1.png" alt="">
+                        </a>
+                        <a href="img/new/f1.png">
+                            <img src="img/new/f1.png" alt="">
+                        </a>
+                        <a href="img/new/f2.png">
+                            <img src="img/new/f2.png" alt="">
+                        </a>
+                        <a href="img/new/f3.png">
+                            <img src="img/new/f3.png" alt="">
+                        </a>
+                        <a href="img/new/f4.png">
+                            <img src="img/new/f4.png" alt="">
+                        </a>
+                        <a href="img/new/f5.png">
+                            <img src="img/new/f5.png" alt="">
+                        </a>
+                        <a href="img/new/f6.png">
+                            <img src="img/new/f6.png" alt="">
+                        </a>
+                        <a href="img/new/f7.png">
+                            <img src="img/new/f7.png" alt="">
+                        </a>
+                        <a href="img/new/f8.png">
+                            <img src="img/new/f8.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p1.png" alt="">
+                        <img src="img/new/f1.png" alt="">
+                        <img src="img/new/f2.png" alt="">
+                        <img src="img/new/f3.png" alt="">
+                        <img src="img/new/f4.png" alt="">
+                        <img src="img/new/f5.png" alt="">
+                        <img src="img/new/f6.png" alt="">
+                        <img src="img/new/f7.png" alt="">
+                        <img src="img/new/f8.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly М100</div>
+                <div class="block_mag__article">Артикул: CARFLYM100011607</div>
+                <div class="block_mag__sum">7 890 р./шт</div>
+                <div class="block_mag__text">
+                    <p style="text-align: left;"><strong>Автомагнитола CarFly М100 1+16 7inch Universal</strong></p>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br><p style="text-align: left;">Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</p>
+                </div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active">
+                <p class="js-store-prod-charcs">Память: 1+16GB</p><p class="js-store-prod-charcs">Диагональ: 7inch</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Нет</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p>
+              </div>
+              <div class="tabs__content">
+                <strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul>
+              </div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form2">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery4">
+                        <a href="img/new/p2.png">
+                            <img src="img/new/p2.png" alt="">
+                        </a>
+                        <a href="img/new/q1.png">
+                            <img src="img/new/q1.png" alt="">
+                        </a>
+                        <a href="img/new/q2.png">
+                            <img src="img/new/q2.png" alt="">
+                        </a>
+                        <a href="img/new/q3.png">
+                            <img src="img/new/q3.png" alt="">
+                        </a>
+                        <a href="img/new/q4.png">
+                            <img src="img/new/q4.png" alt="">
+                        </a>
+                        <a href="img/new/q5.png">
+                            <img src="img/new/q5.png" alt="">
+                        </a>
+                        <a href="img/new/q6.png">
+                            <img src="img/new/q6.png" alt="">
+                        </a>
+                        <a href="img/new/q7.png">
+                            <img src="img/new/q7.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p2.png" alt="">
+                        <img src="img/new/q1.png" alt="">
+                        <img src="img/new/q2.png" alt="">
+                        <img src="img/new/q3.png" alt="">
+                        <img src="img/new/q4.png" alt="">
+                        <img src="img/new/q5.png" alt="">
+                        <img src="img/new/q6.png" alt="">
+                        <img src="img/new/q7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly M150</div>
+                <div class="block_mag__article">Артикул: CARFLYM150023209</div>
+                <div class="block_mag__sum">11 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly M150 2+32 9inch</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 9inch</p><p class="js-store-prod-charcs">Память: 2+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Нет</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul></div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form3">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery5">
+                        <a href="img/new/p3.png">
+                            <img src="img/new/p3.png" alt="">
+                        </a>
+                        <a href="img/new/w1.png">
+                            <img src="img/new/w1.png" alt="">
+                        </a>
+                        <a href="img/new/w2.png">
+                            <img src="img/new/w2.png" alt="">
+                        </a>
+                        <a href="img/new/w3.png">
+                            <img src="img/new/w3.png" alt="">
+                        </a>
+                        <a href="img/new/w4.png">
+                            <img src="img/new/w4.png" alt="">
+                        </a>
+                        <a href="img/new/w5.png">
+                            <img src="img/new/w5.png" alt="">
+                        </a>
+                        <a href="img/new/w6.png">
+                            <img src="img/new/w6.png" alt="">
+                        </a>
+                        <a href="img/new/w7.png">
+                            <img src="img/new/w7.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p3.png" alt="">
+                        <img src="img/new/w1.png" alt="">
+                        <img src="img/new/w2.png" alt="">
+                        <img src="img/new/w3.png" alt="">
+                        <img src="img/new/w4.png" alt="">
+                        <img src="img/new/w5.png" alt="">
+                        <img src="img/new/w6.png" alt="">
+                        <img src="img/new/w7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly М150 Toyota</div>
+                <div class="block_mag__article">Артикул: CARFLYM150023207</div>
+                <div class="block_mag__sum">11 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly М150 2+32 7inch Toyota</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 7inch</p><p class="js-store-prod-charcs">Память: 2+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Нет</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul></div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form4">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery6">
+                        <a href="img/new/p4.png">
+                            <img src="img/new/p4.png" alt="">
+                        </a>
+                        <a href="img/new/e1.png">
+                            <img src="img/new/e1.png" alt="">
+                        </a>
+                        <a href="img/new/e2.png">
+                            <img src="img/new/e2.png" alt="">
+                        </a>
+                        <a href="img/new/e3.png">
+                            <img src="img/new/e3.png" alt="">
+                        </a>
+                        <a href="img/new/e4.png">
+                            <img src="img/new/e4.png" alt="">
+                        </a>
+                        <a href="img/new/e5.png">
+                            <img src="img/new/e5.png" alt="">
+                        </a>
+                        <a href="img/new/e6.png">
+                            <img src="img/new/e6.png" alt="">
+                        </a>
+                        <a href="img/new/e7.png">
+                            <img src="img/new/e7.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p4.png" alt="">
+                        <img src="img/new/e1.png" alt="">
+                        <img src="img/new/e2.png" alt="">
+                        <img src="img/new/e3.png" alt="">
+                        <img src="img/new/e4.png" alt="">
+                        <img src="img/new/e5.png" alt="">
+                        <img src="img/new/e6.png" alt="">
+                        <img src="img/new/e7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly М150i</div>
+                <div class="block_mag__article">Артикул: CARFLYM150023210</div>
+                <div class="block_mag__sum">11 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly М150 2+32 10inch </strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 10inch</p><p class="js-store-prod-charcs">Память: 2+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Нет</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul></div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form5">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery6">
+                        <a href="img/new/p5.png">
+                            <img src="img/new/p5.png" alt="">
+                        </a>
+                        <a href="img/new/r1.png">
+                            <img src="img/new/r1.png" alt="">
+                        </a>
+                        <a href="img/new/r2.jpg">
+                            <img src="img/new/r2.jpg" alt="">
+                        </a>
+                        <a href="img/new/r3.png">
+                            <img src="img/new/r3.png" alt="">
+                        </a>
+                        <a href="img/new/r4.png">
+                            <img src="img/new/r4.png" alt="">
+                        </a>
+                        <a href="img/new/r5.png">
+                            <img src="img/new/r5.png" alt="">
+                        </a>
+                        <a href="img/new/r6.png">
+                            <img src="img/new/r6.png" alt="">
+                        </a>
+                        <a href="img/new/r7.png">
+                            <img src="img/new/r7.png" alt="">
+                        </a>
+                        <a href="img/new/r8.png">
+                            <img src="img/new/r8.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p5.png" alt="">
+                        <img src="img/new/r1.png" alt="">
+                        <img src="img/new/r2.jpg" alt="">
+                        <img src="img/new/r3.png" alt="">
+                        <img src="img/new/r4.png" alt="">
+                        <img src="img/new/r5.png" alt="">
+                        <img src="img/new/r6.png" alt="">
+                        <img src="img/new/r7.png" alt="">
+                        <img src="img/new/r8.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly M300 Toyota</div>
+                <div class="block_mag__article">Артикул: CARFLYM300033207</div>
+                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly M300 3+32 7inch Toyota</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 7inch</p><p class="js-store-prod-charcs">Память: 3+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Да</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид - 1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован </li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul>            </div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form6">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery7">
+                        <a href="img/new/p6.png">
+                            <img src="img/new/p6.png" alt="">
+                        </a>
+                        <a href="img/new/t1.png">
+                            <img src="img/new/t1.png" alt="">
+                        </a>
+                        <a href="img/new/t2.jpg">
+                            <img src="img/new/t2.jpg" alt="">
+                        </a>
+                        <a href="img/new/t3.png">
+                            <img src="img/new/t3.png" alt="">
+                        </a>
+                        <a href="img/new/t4.png">
+                            <img src="img/new/t4.png" alt="">
+                        </a>
+                        <a href="img/new/t5.png">
+                            <img src="img/new/t5.png" alt="">
+                        </a>
+                        <a href="img/new/t6.png">
+                            <img src="img/new/t6.png" alt="">
+                        </a>
+                        <a href="img/new/t7.png">
+                            <img src="img/new/t7.png" alt="">
+                        </a>
+                        <a href="img/new/t8.png">
+                            <img src="img/new/t8.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p6.png" alt="">
+                        <img src="img/new/t1.png" alt="">
+                        <img src="img/new/t2.jpg" alt="">
+                        <img src="img/new/t3.png" alt="">
+                        <img src="img/new/t4.png" alt="">
+                        <img src="img/new/t5.png" alt="">
+                        <img src="img/new/t6.png" alt="">
+                        <img src="img/new/t7.png" alt="">
+                        <img src="img/new/t8.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly M300 Universal</div>
+                <div class="block_mag__article">Артикул: CARFLYU300033207</div>
+                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly M300 3+32 7inch Universal</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 7inch</p><p class="js-store-prod-charcs">Память: 3+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Да</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul></div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form7">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery8">
+                        <a href="img/new/p7.png">
+                            <img src="img/new/p7.png" alt="">
+                        </a>
+                        <a href="img/new/y1.png">
+                            <img src="img/new/y1.png" alt="">
+                        </a>
+                        <a href="img/new/y2.jpg">
+                            <img src="img/new/y2.jpg" alt="">
+                        </a>
+                        <a href="img/new/y3.png">
+                            <img src="img/new/y3.png" alt="">
+                        </a>
+                        <a href="img/new/y4.png">
+                            <img src="img/new/y4.png" alt="">
+                        </a>
+                        <a href="img/new/y5.png">
+                            <img src="img/new/y5.png" alt="">
+                        </a>
+                        <a href="img/new/y6.png">
+                            <img src="img/new/y6.png" alt="">
+                        </a>
+                        <a href="img/new/y7.png">
+                            <img src="img/new/y7.png" alt="">
+                        </a>
+                        <a href="img/new/y8.png">
+                            <img src="img/new/y8.png" alt="">
+                        </a>
+                        <a href="img/new/y9.png">
+                            <img src="img/new/y9.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p7.png" alt="">
+                        <img src="img/new/y1.png" alt="">
+                        <img src="img/new/y2.jpg" alt="">
+                        <img src="img/new/y3.png" alt="">
+                        <img src="img/new/y4.png" alt="">
+                        <img src="img/new/y5.png" alt="">
+                        <img src="img/new/y6.png" alt="">
+                        <img src="img/new/y7.png" alt="">
+                        <img src="img/new/y8.png" alt="">
+                        <img src="img/new/y9.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly М300</div>
+                <div class="block_mag__article">Артикул: CARFLYM300033209</div>
+                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly М300 3+32 9inch</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 9inch</p><p class="js-store-prod-charcs">Память: 3+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Да</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul></div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+<div class="form-wrapper form8">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="block_mag">
+            <div class="block_mag__l-side">
+                <div class="block_mag__sls">
+                    <div class="block_mag__top slider-for popup-gallery9">
+                        <a href="img/new/p8.png">
+                            <img src="img/new/p8.png" alt="">
+                        </a>
+                        <a href="img/new/u1.png">
+                            <img src="img/new/u1.png" alt="">
+                        </a>
+                        <a href="img/new/u2.jpg">
+                            <img src="img/new/u2.jpg" alt="">
+                        </a>
+                        <a href="img/new/u3.png">
+                            <img src="img/new/u3.png" alt="">
+                        </a>
+                        <a href="img/new/u4.png">
+                            <img src="img/new/u4.png" alt="">
+                        </a>
+                        <a href="img/new/u5.png">
+                            <img src="img/new/u5.png" alt="">
+                        </a>
+                        <a href="img/new/u6.png">
+                            <img src="img/new/u6.png" alt="">
+                        </a>
+                        <a href="img/new/u7.png">
+                            <img src="img/new/u7.png" alt="">
+                        </a>
+                        <a href="img/new/u8.png">
+                            <img src="img/new/u8.png" alt="">
+                        </a>
+                        <a href="img/new/u9.png">
+                            <img src="img/new/u9.png" alt="">
+                        </a>
+                    </div>
+                    <div class="block_mag__bottom slider-nav">
+                        <img src="img/new/p8.png" alt="">
+                        <img src="img/new/u1.png" alt="">
+                        <img src="img/new/u2.jpg" alt="">
+                        <img src="img/new/u3.png" alt="">
+                        <img src="img/new/u4.png" alt="">
+                        <img src="img/new/u5.png" alt="">
+                        <img src="img/new/u6.png" alt="">
+                        <img src="img/new/u7.png" alt="">
+                        <img src="img/new/u8.png" alt="">
+                        <img src="img/new/u9.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="block_mag__r-side">
+                <div class="block_mag__title">CarFly М300i</div>
+                <div class="block_mag__article">Артикул: CARFLYM300033210</div>
+                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__text"><strong>Автомагнитола CarFly М300 3+32 10inch</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
+            </div>
+        </div>
+        <div class="block_mag__tabs tabs">
+            <ul class="tabs__caption">
+                <li class="active">Характеристики</li>
+                <li>Подробные характеристики</li>
+                <li>Дополнительно</li>
+              </ul>
+            
+              <div class="tabs__content active"><p class="js-store-prod-charcs">Диагональ: 10inch</p><p class="js-store-prod-charcs">Память: 3+32GB</p><p class="js-store-prod-charcs">Bluetooth: Да</p><p class="js-store-prod-charcs">Wi-Fi: Да</p><p class="js-store-prod-charcs">Встроенная навигация: Да</p><p class="js-store-prod-charcs">Голосовое управление: Да</p><p class="js-store-prod-charcs">Операционная система: Android</p><p class="js-store-prod-charcs">Слот под SIM-Карту: Да</p><p class="js-store-prod-charcs">Тип матрицы экрана: OLED</p><p class="js-store-prod-dimensions">ДxШxВ: 31x22x10&nbsp;мм</p><p class="js-store-prod-weight">Вес: 900&nbsp;г</p></div>
+              <div class="tabs__content"><strong>Дополнительная информация</strong><br><ul><li>Регулятор громкости цифровой; поворотный; кнопочный</li><li>Доп. опции проигрывателя воспроизведение с USB накопителей; AUX; управление с руля автомобиля</li><li>Количество станций 30 шт.</li><li>Вес товара с упаковкой 900 г</li><li>Ширина упаковки 22 см</li><li>Длина упаковки 31 см</li><li>Высота упаковки 10 см</li><li>Доп. опции тюнера навигация и поддержка приложений; hands free звонки; диапазон FM,AM</li><li>Типоразмер магнитолы Штатное место; 2din; 1din</li><li>Тип проигрывателя flash; Bluetooth</li><li>Количество полос 15</li><li>Страна производства Китай</li></ul><strong>Марка автомобиля</strong><br><ul><li>Универсальная модель для всех типов автомобиля; Форд Фокус; Солярис; Лада веста гранта; Nissan; любая модель автомобиля универсален для всех марок; Тойота Королла; Kia, Kia Rio 3; Шевроле, Chevrolet; Тойота, Toyota</li></ul><strong>Габариты устройства</strong><br><ul><li>Глубина предмета 4.5 см</li><li>Высота предмета 18 см</li><li>Ширина предмета 10 см</li><li>Материал корпуса - Металл, пластик, стекло</li></ul><strong>Комплектация</strong><br><ul><li>GPS антенна - 1 шт; салфетка для экрана, инструкция, талон; USB кабель, отвертка-1шт, RCA провода; монтажный комплект, силовая проводка;</li><li>&nbsp;автомагнитола 2 дин андроид-1шт</li></ul><strong>Общие характеристики</strong><br><ul><li>Модель Магнитола автомобильная сенсорная с экраном; Автомагнитола / магнитола 2din; андроид магнитола</li><li>Гарантийный срок 12 мес</li></ul><strong>Связь</strong><br><ul><li>Беспроводные интерфейсы</li><li>Bluetooth; Wi-Fi; GPS; Громкая связь</li></ul><strong>Другие функции</strong><br><ul><li>Поддерживаемый формат WAV; JPEG, AVI, M4A, MKV, MOV, MPEG-2, MPEG-4, MPG; MP3 /WMA / FLAC</li></ul><strong>Хрупкость</strong><br><ul><li>Не рвется; надёжно защищено; Надежно упакован Не хрупкое</li><li>Транспортировка Не хрупкий груз; Не требует особенной транспортировки</li></ul><strong>Память</strong><br><ul><li>Поддержка карт памяти USB; До 32 гб; 16 гб</li></ul><strong>Технические особенности</strong><br><ul><li>Длина кабеля 10 см</li><li>Разъем подключения</li><li>ISO; RCA Интерфейсы и разъемы Интерфейс Bluetooth; USB; AUX</li></ul>            </div>
+              <div class="tabs__content"><strong>ВНИМАНИЕ</strong>: <em>в комплекте не идёт рамка, рекомендуем связаться с консультантом&nbsp;для получения подробной инструкции и технических возможностей по установки штатного головного устройства для вашего автомобиля. </em><br><em>Переходная рамка даёт возможность гармонично установить штатное головное устройство в автомобиль не изменяя стилистика салона. Для некоторых авто существует возможность установки без переходной рамки. </em>            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    
+    $(document).ready(function () {
+
+        if (document.documentElement.clientWidth > 767) {
+            $('#pagepiling').pagepiling({
+                anchors: ['page1', 'page2', 'page6', 'page61', 'page7', 'page3', 'page4', 'page5'],
+                menu: '#menu',
+            });
+	        // var elms2 = document.querySelectorAll('.slider2');
+	        // for (var i = 0, len = elms2.length; i < len; i++) {
+	        //     // инициализация elms2[i] в качестве слайдера
+	        //     new ChiefSlider(elms2[i]);
+	        // }
+        }
+        // var elms = document.querySelectorAll('.slider');
+        // for (var i = 0, len = elms.length; i < len; i++) {
+        //     // инициализация elms[i] в качестве слайдера
+        //     new ChiefSlider(elms[i]);
+        // }
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery2').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery3').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery4').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery5').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery6').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery7').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery8').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+        $('.popup-gallery9').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+    });
+
+
+    let map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: new google.maps.LatLng(52.295341, 104.296578),
+            zoom: 13,
+        });
+
+        const icons = {
+            info: {
+                icon: "../img/marker.png",
+            },
+        };
+        const features = [{
+            position: new google.maps.LatLng(52.2954245, 104.3047055),
+            type: "info",
+        }, {
+            position: new google.maps.LatLng(52.294379, 104.2943406),
+            type: "info",
+        },];
+
+        // Create markers.
+        for (let i = 0; i < features.length; i++) {
+            const marker = new google.maps.Marker({
+                position: features[i].position,
+                icon: icons[features[i].type].icon,
+                map: map,
+            });
+        }
+    }
+</script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/magni.js"></script>
+<script src="js/slider.js"></script>
+</body>
+
+</html>

@@ -308,7 +308,7 @@ flex: 0 0 33.3%;
         	align-items: center; */
         }
         .production__item .production__image {
-            height: 170px !important;
+            height: 150px !important;
         }
         .production__image, .production__content {
         	margin-right: 0;
@@ -480,6 +480,9 @@ flex: 0 0 33.3%;
 			.production__block {
 				margin: 0;
 			}
+        }
+        .section_foto_slider.d-flex .production__item {
+            display: flex;
         }
 
     </style>
@@ -708,7 +711,7 @@ flex: 0 0 33.3%;
                     <h2 class="production__title title">
                         Продукция
                     </h2>
-                    <div class="section_foto_slider slider">
+                    <div class="section_foto_slider d-flex">
                         <!-- <div class="slider__wrapper"> -->
                             <div class="production__block prod_slid">
                                 <div class="production__item slider__item">
@@ -721,7 +724,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">7 890 р./ шт</span>
                                     <div class="production__btn feed1">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -734,7 +737,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">11 890 р./ шт</span>
                                     <div class="production__btn feed2">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -747,7 +750,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">11 890 р./ шт</span>
                                     <div class="production__btn feed3">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -760,7 +763,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">11 890 р./ шт</span>
                                     <div class="production__btn feed4">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -773,7 +776,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">14 890 р./ шт</span>
                                     <div class="production__btn feed5">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -786,7 +789,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">14 890 р./ шт</span>
                                     <div class="production__btn feed6">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -799,7 +802,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">14 890 р./ шт</span>
                                     <div class="production__btn feed7">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                                 <div class="production__item slider__item">
@@ -812,7 +815,7 @@ flex: 0 0 33.3%;
                                     <span class="production__price">14 890 р./ шт</span>
                                     <div class="production__btn feed8">
                                         <span>Подробнее</span>
-                                        <img src="img/svg/file.svg" alt="" class="img-svg">
+                                        <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
                                     </div>
                                 </div>
                             </div>
@@ -846,7 +849,8 @@ flex: 0 0 33.3%;
                 </h2>
                 <div class="section_foto_slider">
                     <!-- <div class="slider__wrapper"> -->
-                        <div class="slider__items popup-gallery2 foto_slid">
+                        <!-- <div class="slider__items popup-gallery2 foto_slid"> -->
+                        <div class="popup-gallery2 foto_slid">
                             <div class="slider__item">
                                 <a href="/img/new/s1.jpg">
                                     <img src="/img/new/s1.jpg">
@@ -936,7 +940,8 @@ flex: 0 0 33.3%;
                 </h2>
                 <div class="sertificat_foto_slider">
                     <!-- <div class="slider__wrapper"> -->
-                        <div class="slider__items popup-gallery sertificate_slider">
+                        <!-- <div class="slider__items popup-gallery sertificate_slider"> -->
+                        <div class="popup-gallery sertificate_slider">
                             <a class="slider__item" href="img/foto_sert_1.PNG" title="Сертификат 1">
                                 <img src="img/foto_sert_1.PNG">
                             </a>
@@ -2027,6 +2032,15 @@ flex: 0 0 33.3%;
 <script src="js/main.js"></script>
 <script src="js/magni.js"></script>
 <script src="js/slider.js"></script>
+<script>
+    $(document).ready(function () {
+         var elms = document.querySelectorAll('.slider');
+         for (var i = 0, len = elms.length; i < len; i++) {
+             // инициализация elms[i] в качестве слайдера
+             new ChiefSlider(elms[i]);
+         }
+    });
+</script>
 </body>
 
 </html>

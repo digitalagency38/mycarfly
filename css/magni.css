@@ -637,3 +637,6 @@ img.mfp-img {
     white-space: nowrap;
   }
 }
+.slider_control {
+	z-index: 999 !important;
+}

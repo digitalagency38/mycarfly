@@ -13,21 +13,21 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/jquery.pagepiling.css">
     <!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	   m[i].l=1*new Date();
-	   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-	   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-	   ym(93104764, "init", {
-	        clickmap:true,
-	        trackLinks:true,
-	        accurateTrackBounce:true
-	   });
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/93104764" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
+       ym(93104764, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/93104764" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <style>
 ol.slider__indicators {
     display: none;
@@ -37,7 +37,20 @@ ol.slider__indicators {
         }
         .slider__control {
             cursor: pointer !important;
+            z-index: 999 !important;
         }
+      .production .slider__control {
+          position: relative !important;
+      }
+      .production__block {
+        align-items: center;
+      }
+      .production .slider__control[data-slide=prev] {
+       left: 10px !important; 
+      }
+      .production .slider__control[data-slide=next] {
+       right: 10px !important; 
+      }
         .video {
 width: 70%;
             margin: auto;
@@ -117,9 +130,9 @@ flex: 0 0 33.3%;
     margin: 0;
 }
 @media all and (min-width: 767px) {
-	.question_slider.slider2 .slider__item {
-        height: 55vh;	
-	}
+    .question_slider.slider2 .slider__item {
+        height: 55vh;   
+    }
     .question_slider.slider2 .slider__item {
         flex: 0 0 100%;
         max-width: 100%;
@@ -132,39 +145,39 @@ flex: 0 0 33.3%;
         z-index: 5;
     }
     .slider2 {
-    	position: relative;
+        position: relative;
     }
 }
 @media all and (max-width: 767px) {
-	.question_slider .slider__items {
-		flex-direction: column;
-	}
-	.question_slider .slider__item {
-		flex: none;
-		max-width: 100%;
-		height: auto;
-	}
+    .question_slider .slider__items {
+        flex-direction: column;
+    }
+    .question_slider .slider__item {
+        flex: none;
+        max-width: 100%;
+        height: auto;
+    }
     .question_slider .slider__wrapper {
-    	overflow: unset;
+        overflow: unset;
     }
     .accordeon {
-    	padding: 0;
+        padding: 0;
     }
     .question_slider .slider__control, .question_slider .slider__indicators {
-    	display: none;
+        display: none;
     }
     .question_slider .slider__item:not(:last-child) {
-    	margin-bottom: 12px;
+        margin-bottom: 12px;
     }
     .accordeon__plus {
-	    right: 20px;
-	    top: 50%;
-	    height: 20px;
-	    z-index: 10;
-	    margin-top: -100px;
+        right: 20px;
+        top: 50%;
+        height: 20px;
+        z-index: 10;
+        margin-top: -100px;
     }
     .accordeon__heading {
-    	position: relative;
+        position: relative;
     }
 }
         .section_foto_slider.slider .slider__item {
@@ -292,29 +305,29 @@ flex: 0 0 33.3%;
             margin: 15px 0 !important;
         }*/
         .production__block {
-        	display: flex;
-        	/* margin: 0 -10px;
-        	flex-wrap: wrap; */
-        	grid-gap: 0;
+            display: flex;
+            /* margin: 0 -10px;
+            flex-wrap: wrap; */
+            grid-gap: 0;
             margin: 0 -10px;
         }
         .production__item {
-        	/* width: calc(33.3% - 20px); */
-        	flex-direction: column;
-        	padding: 20px;
+            /* width: calc(33.3% - 20px); */
+            flex-direction: column;
+            padding: 20px;
             margin: 0 10px;
-        	/* margin-bottom: 20px;
-        	justify-content: center;
-        	align-items: center; */
+            /* margin-bottom: 20px;
+            justify-content: center;
+            align-items: center; */
         }
         .production__item .production__image {
             height: 150px !important;
         }
         .production__image, .production__content {
-        	margin-right: 0;
+            margin-right: 0;
         }
         .production__content {
-        	margin-top: 15px;
+            margin-top: 15px;
         }
         .production__article {
             margin-top: 4px;
@@ -322,12 +335,12 @@ flex: 0 0 33.3%;
             font-size: 14px;
         }
         .production__price {
-        	width: 100%;
-        	margin: 15px 0;
+            width: 100%;
+            margin: 15px 0;
         }
         .production__btn {
-        	width: 100%;
-        	margin-left: 0;
+            width: 100%;
+            margin-left: 0;
         }
 
         h2.soon {
@@ -359,9 +372,9 @@ flex: 0 0 33.3%;
         }
 
         @media (max-width: 767px) {
-        	.production__item {
-    		    width: calc(50% - 20px);	
-        	}
+            .production__item {
+                width: calc(50% - 20px);    
+            }
             .production {
                 height: auto;
             }
@@ -472,14 +485,14 @@ flex: 0 0 33.3%;
             }
         }
         @media (max-width: 640px) {
-			.production__item {
-				width: 100%;
-				margin-left: 0;
-				margin-right: 0;
-			}
-			.production__block {
-				margin: 0;
-			}
+            .production__item {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .production__block {
+                margin: 0;
+            }
         }
         .section_foto_slider.d-flex .production__item {
             display: flex;
@@ -567,9 +580,9 @@ flex: 0 0 33.3%;
                                 <!-- Автомагнитола CarFly M150 -->
                                 Штатные автомагнитолы на Android CarFly
                             </h1>
-                            <p class="first__text">
+                           <!--  <p class="first__text">
                                 Штатное головное устройство на OC Android универсального типоразмера 2DIN.
-                            </p>
+                            </p> -->
                             <!-- <a target="_blank" href="/files/bkl3.pdf" class="first__btn">
                                 <span>Подробнее</span>
                                 <img src="img/svg/file.svg" alt="" class="img-svg">
@@ -773,7 +786,7 @@ flex: 0 0 33.3%;
                                         <div class="production__article">Артикул: CARFLYM300033207</div>
                                         <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
                                     </div>
-                                    <span class="production__price">14 890 р./ шт</span>
+                                    <span class="production__price">17 890 р./ шт</span>
                                     <div class="production__btn feed5">
                                         <span>Подробнее</span>
                                         <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
@@ -786,7 +799,7 @@ flex: 0 0 33.3%;
                                         <div class="production__article">Артикул: CARFLYM100011607</div>
                                         <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
                                     </div>
-                                    <span class="production__price">14 890 р./ шт</span>
+                                    <span class="production__price">17 890 р./ шт</span>
                                     <div class="production__btn feed6">
                                         <span>Подробнее</span>
                                         <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
@@ -799,7 +812,7 @@ flex: 0 0 33.3%;
                                         <div class="production__article">Артикул: CARFLYM300033209</div>
                                         <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
                                     </div>
-                                    <span class="production__price">14 890 р./ шт</span>
+                                    <span class="production__price">17 890 р./ шт</span>
                                     <div class="production__btn feed7">
                                         <span>Подробнее</span>
                                         <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
@@ -812,7 +825,7 @@ flex: 0 0 33.3%;
                                         <div class="production__article">Артикул: CARFLYM300033210</div>
                                         <p class="production__text">Новая линейка штатных головных устройств созданных специально для России</p>
                                     </div>
-                                    <span class="production__price">14 890 р./ шт</span>
+                                    <span class="production__price">17 890 р./ шт</span>
                                     <div class="production__btn feed8">
                                         <span>Подробнее</span>
                                         <!-- <img src="img/svg/file.svg" alt="" class="img-svg"> -->
@@ -852,53 +865,88 @@ flex: 0 0 33.3%;
                         <!-- <div class="slider__items popup-gallery2 foto_slid"> -->
                         <div class="popup-gallery2 foto_slid">
                             <div class="slider__item">
-                                <a href="/img/new/s1.jpg">
-                                    <img src="/img/new/s1.jpg">
+                                <a href="/img/new_photo/s1-min.jpeg">
+                                    <img src="/img/new_photo/s1-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/s2.jpg">
-                                    <img src="/img/new/s2.jpg">
+                                <a href="/img/new_photo/s2-min.jpeg">
+                                    <img src="/img/new_photo/s2-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/s3.jpg">
-                                    <img src="/img/new/s3.jpg">
+                                <a href="/img/new_photo/s3-min.jpeg">
+                                    <img src="/img/new_photo/s3-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/s4.jpg">
-                                    <img src="/img/new/s4.jpg">
+                                <a href="/img/new_photo/s4-min.jpeg">
+                                    <img src="/img/new_photo/s4-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/s5.jpg">
-                                    <img src="/img/new/s5.jpg">
+                                <a href="/img/new_photo/s5-min.jpeg">
+                                    <img src="/img/new_photo/s5-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/s6.jpg">
-                                    <img src="/img/new/s6.jpg">
+                                <a href="/img/new_photo/s6-min.jpeg">
+                                    <img src="/img/new_photo/s6-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/s7.jpg">
-                                    <img src="/img/new/s7.jpg">
+                                <a href="/img/new_photo/s7-min.jpeg">
+                                    <img src="/img/new_photo/s7-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/9.jpg">
-                                    <img src="/img/new/9.jpg">
+                                <a href="/img/new_photo/s8-min.jpeg">
+                                    <img src="/img/new_photo/s8-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/10.jpg">
-                                    <img src="/img/new/10.jpg">
+                                <a href="/img/new_photo/s9-min.jpeg">
+                                    <img src="/img/new_photo/s9-min.jpeg">
                                 </a>
                             </div>
                             <div class="slider__item">
-                                <a href="/img/new/11.jpg">
-                                    <img src="/img/new/11.jpg">
+                                <a href="/img/new_photo/s10-min.jpeg">
+                                    <img src="/img/new_photo/s10-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s1-min.jpeg">
+                                    <img src="/img/new_photo/s1-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s11-min.jpeg">
+                                    <img src="/img/new_photo/s11-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s12-min.jpeg">
+                                    <img src="/img/new_photo/s12-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s13-min.jpeg">
+                                    <img src="/img/new_photo/s13-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s14-min.jpeg">
+                                    <img src="/img/new_photo/s14-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s15-min.jpeg">
+                                    <img src="/img/new_photo/s15-min.jpeg">
+                                </a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="/img/new_photo/s16-min.jpeg">
+                                    <img src="/img/new_photo/s16-min.jpeg">
                                 </a>
                             </div>
                         </div>
@@ -1004,213 +1052,213 @@ flex: 0 0 33.3%;
                     Вопрос - ответ
                 </h2>
                 <div class="question_slider">
-	                <!-- <div class="slider__wrapper"> -->
-	                    <div class="slider__items questions_slider">
-			                <div class="question__block slider__item">
-			                    <div class="accordeon">
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Какой размер устройства?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Размер устройства 178*100, диагональ 7 дюймов.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Смогу ли я самостоятельно установить?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Устройство является универсальным, подойдет на большинство автомобилей. В случае
-			                                некоторых автомобилей, стандартного комплекта проводов будет вполне достаточно.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>После установки остались зазоры вокруг устройства, что с этим делать?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                В некоторых автомобилях для правильной установки необходима переходная рамка, для того
-			                                чтобы убрать все зазоры и неровности. Для уточнения обратитесь в техподдержку.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Возможно ли запустить штатный усилитель?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Возможно, для большинства автомобилей предусмотрен Canbus, который приобретается
-			                                отдельно под модель автомобиля, где присутствует заводской усилитель звука.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Будут ли у меня работать кнопки на руле?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Зачастую для подключения кнопок на руле достаточно набора проводов из комплекта
-			                                устройства, но бывают случаи, где необходим Canbus. Для уточнения по модели вашего
-			                                автомобиля, напишите в техподдержку.
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="question__block slider__item">
-			                    <div class="accordeon">
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>В чем преимущество головного устройства на базе андроид в сравнении с штатным устройством?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Большое количество функций и очень интересный функционал, фактически это второй телефон,
-			                                только установленный в автомобиле. Возможность подключения к интернету, подключения
-			                                вашего смартфона для прослушивания музыки и общения handsfree через Bluetooth,
-			                                автономная навигация, подключение usb накопителя, функция дублежа экрана с телефона,
-			                                возможность установить с платформы playmarket все необходимые приложения. Если остались
-			                                вопросы, напишите нам в техподдержку.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Какая выходная мощность звука?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Максимальная мощность звука 50w на канал.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Возможно подключить камеру заднего и переднего вида?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Да, на устройстве предусмотрены видео выходы под камеры заднего и переднего вида.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Возможно подключить усилитель звука?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Да, на устройстве предусмотрены аудиовыходы для подключения усилителя звука.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Возможно пользоваться навигацией без подключения к интернету?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Возможно, в комплектации с устройством предусмотрена GPS антенна, которая позволит
-			                                пользоваться любым навигатором с заранее установленными картами города.
-			                            </div>
-			                        </div>
+                    <!-- <div class="slider__wrapper"> -->
+                        <div class="slider__items questions_slider">
+                            <div class="question__block slider__item">
+                                <div class="accordeon">
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Какой размер устройства?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Наши устройства есть в разных исполнениях. Универсальные 2 Дин 178 на 100мм. 2 дин Toyota размером 200 на 100мм. А так же 9 и 10 дюймовые планшеты под переходные рамки.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Смогу ли я самостоятельно установить?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Устройство является универсальным, подойдет на большинство автомобилей. В случае
+                                            некоторых автомобилей, стандартного комплекта проводов будет вполне достаточно.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>После установки остались зазоры вокруг устройства, что с этим делать?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            В некоторых автомобилях для правильной установки необходима переходная рамка, для того
+                                            чтобы убрать все зазоры и неровности. Для уточнения обратитесь в техподдержку.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Возможно ли запустить штатный усилитель?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Возможно, для большинства автомобилей предусмотрен Canbus, который приобретается
+                                            отдельно под модель автомобиля, где присутствует заводской усилитель звука.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Будут ли у меня работать кнопки на руле?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Зачастую для подключения кнопок на руле достаточно набора проводов из комплекта
+                                            устройства, но бывают случаи, где необходим Canbus. Для уточнения по модели вашего
+                                            автомобиля, напишите в техподдержку.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question__block slider__item">
+                                <div class="accordeon">
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>В чем преимущество головного устройства на базе андроид в сравнении с штатным устройством?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Большое количество функций и очень интересный функционал, фактически это второй телефон,
+                                            только установленный в автомобиле. Возможность подключения к интернету, подключения
+                                            вашего смартфона для прослушивания музыки и общения handsfree через Bluetooth,
+                                            автономная навигация, подключение usb накопителя, функция дублежа экрана с телефона,
+                                            возможность установить с платформы playmarket все необходимые приложения. Если остались
+                                            вопросы, напишите нам в техподдержку.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Какая выходная мощность звука?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Максимальная мощность звука 50w на канал.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Возможно подключить камеру заднего и переднего вида?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Да, на устройстве предусмотрены видео выходы под камеры заднего и переднего вида.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Возможно подключить усилитель звука?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Да, на устройстве предусмотрены аудиовыходы для подключения усилителя звука.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Возможно пользоваться навигацией без подключения к интернету?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Возможно, в комплектации с устройством предусмотрена GPS антенна, которая позволит
+                                            пользоваться любым навигатором с заранее установленными картами города.
+                                        </div>
+                                    </div>
 
-			                    </div>
-			                </div>
-			                <div class="question__block slider__item">
-			                    <div class="accordeon">
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Подключил камеру заднего вида, появилась рябь во время включения задней передачи.</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                В большинстве случаев, подобная проблема решается, подключением фильтра по питанию,
-			                                который приобретается отдельно.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>При включении габаритов, экран становится тусклым, как отключить такую функцию?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Есть три возможных решения, как отключить эту функцию. 1. Отключить провод иллюминации,
-			                                который идет на основную фишку питания устройства. 2. Прибавить яркость экрана на уже
-			                                включенных габаритах. 3. Отключить подсветку по габаритам в настройках устройства.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Возможно ли сменить приложение навигации на виджете рабочего стола?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Да, в настройках устройства, необходимо выбрать заранее скаченное навигационное
-			                                приложение и выбрать его по умолчанию.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>После подключения к интернету, дата выставилась верная, часы настроить не могу.</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Необходимо зайти в настройки даты и времени, отключить пункт «использовать время сети» и
-			                                выставить нужное значение.
-			                            </div>
-			                        </div>
-			                        <div class="accordeon__panel">
-			                            <div class="accordeon__heading">
-			                                <span>Я приобрел отдельно комплект камер 360, возможно ли подключить на устройство?</span>
-			                                <div class="accordeon__plus">
-			                                    <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
-			                                </div>
-			                            </div>
-			                            <div class="accordeon__collapse">
-			                                Существует большое количество всевозможных систем, которые реализуют обзор 360, если ваш
-			                                комплект включает в себя специальный блок с 1 выходом rca кабеля, то проблем с
-			                                подключением не возникнет.
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-	                    </div>
-	                <!-- </div>
-	                <a href="#" class="slider__control" data-slide="prev"></a>
-	                <a href="#" class="slider__control" data-slide="next"></a>
-	                <ol class="slider__indicators">
-	                    <li data-slide-to="0"></li>
-	                    <li data-slide-to="1"></li>
-	                    <li data-slide-to="2"></li>
-	                </ol> -->
+                                </div>
+                            </div>
+                            <div class="question__block slider__item">
+                                <div class="accordeon">
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Подключил камеру заднего вида, появилась рябь во время включения задней передачи.</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            В большинстве случаев, подобная проблема решается, подключением фильтра по питанию,
+                                            который приобретается отдельно.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>При включении габаритов, экран становится тусклым, как отключить такую функцию?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Есть три возможных решения, как отключить эту функцию. 1. Отключить провод иллюминации,
+                                            который идет на основную фишку питания устройства. 2. Прибавить яркость экрана на уже
+                                            включенных габаритах. 3. Отключить подсветку по габаритам в настройках устройства.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Возможно ли сменить приложение навигации на виджете рабочего стола?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Да, в настройках устройства, необходимо выбрать заранее скаченное навигационное
+                                            приложение и выбрать его по умолчанию.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>После подключения к интернету, дата выставилась верная, часы настроить не могу.</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Необходимо зайти в настройки даты и времени, отключить пункт «использовать время сети» и
+                                            выставить нужное значение.
+                                        </div>
+                                    </div>
+                                    <div class="accordeon__panel">
+                                        <div class="accordeon__heading">
+                                            <span>Я приобрел отдельно комплект камер 360, возможно ли подключить на устройство?</span>
+                                            <div class="accordeon__plus">
+                                                <img src="img/svg/arrow-accordeon.svg" alt="" class="img-svg">
+                                            </div>
+                                        </div>
+                                        <div class="accordeon__collapse">
+                                            Существует большое количество всевозможных систем, которые реализуют обзор 360, если ваш
+                                            комплект включает в себя специальный блок с 1 выходом rca кабеля, то проблем с
+                                            подключением не возникнет.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div>
+                    <a href="#" class="slider__control" data-slide="prev"></a>
+                    <a href="#" class="slider__control" data-slide="next"></a>
+                    <ol class="slider__indicators">
+                        <li data-slide-to="0"></li>
+                        <li data-slide-to="1"></li>
+                        <li data-slide-to="2"></li>
+                    </ol> -->
                 </div>
             </div>
         </div>
@@ -1588,7 +1636,7 @@ flex: 0 0 33.3%;
             <div class="block_mag__r-side">
                 <div class="block_mag__title">CarFly M300 Toyota</div>
                 <div class="block_mag__article">Артикул: CARFLYM300033207</div>
-                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__sum">17 890 р./шт</div>
                 <div class="block_mag__text"><strong>Автомагнитола CarFly M300 3+32 7inch Toyota</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
             </div>
         </div>
@@ -1656,7 +1704,7 @@ flex: 0 0 33.3%;
             <div class="block_mag__r-side">
                 <div class="block_mag__title">CarFly M300 Universal</div>
                 <div class="block_mag__article">Артикул: CARFLYU300033207</div>
-                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__sum">17 890 р./шт</div>
                 <div class="block_mag__text"><strong>Автомагнитола CarFly M300 3+32 7inch Universal</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
             </div>
         </div>
@@ -1800,7 +1848,7 @@ flex: 0 0 33.3%;
             <div class="block_mag__r-side">
                 <div class="block_mag__title">CarFly М300i</div>
                 <div class="block_mag__article">Артикул: CARFLYM300033210</div>
-                <div class="block_mag__sum">14 890 р./шт</div>
+                <div class="block_mag__sum">17 890 р./шт</div>
                 <div class="block_mag__text"><strong>Автомагнитола CarFly М300 3+32 10inch</strong><br>Для замены штатной автомагнитолы, бренд созданный в Сибири прошедший полную сертификацию, имеет все документы соответствия. Большой и очень интересный функционал, фактически это второй телефон, только установленный в автомобиле.<br><br><strong>Возможности</strong>:<br><ul><li>подключения к интернету,</li><li>подключения вашего смартфона для прослушивания музыки,</li><li>общение handsfree через Bluetooth,</li><li>подключение usb накопителя,</li><li>функция дубляжа экрана с телефона,</li><li>возможность установить с платформы playmarket все необходимые приложения.</li></ul><br>Максимальная мощность звука 50w на канал, возможность подключения усилителя. В комплектации с устройством предусмотрена GPS антенна, которая позволит пользоваться любым навигатором с заранее установленными картами города без подключения к интернету.</div>
             </div>
         </div>
@@ -1830,11 +1878,11 @@ flex: 0 0 33.3%;
                 anchors: ['page1', 'page2', 'page6', 'page61', 'page7', 'page3', 'page4', 'page5'],
                 menu: '#menu',
             });
-	        // var elms2 = document.querySelectorAll('.slider2');
-	        // for (var i = 0, len = elms2.length; i < len; i++) {
-	        //     // инициализация elms2[i] в качестве слайдера
-	        //     new ChiefSlider(elms2[i]);
-	        // }
+            // var elms2 = document.querySelectorAll('.slider2');
+            // for (var i = 0, len = elms2.length; i < len; i++) {
+            //     // инициализация elms2[i] в качестве слайдера
+            //     new ChiefSlider(elms2[i]);
+            // }
         }
         // var elms = document.querySelectorAll('.slider');
         // for (var i = 0, len = elms.length; i < len; i++) {
